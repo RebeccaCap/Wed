@@ -66,7 +66,7 @@ function App() {
         <section className="rsvp" id="rsvp" aria-labelledby="rsvp-title">
           <p className="eyebrow">HOPPAS VI SES</p>
           <h2 id="rsvp-title">OSA</h2>
-          <p>Meddela oss gärna om du kommer.</p>
+          <p>Meddela oss gärna om du kommer och eventuella matrestriktioner.</p>
           <a className="button-link button-link--dark" href="mailto:rebecca.bergekrans@gmail.com?subject=OSA%20-%20Simon%20och%20Michaela">
             OSA via e-post <span aria-hidden="true">-&gt;</span>
           </a>
