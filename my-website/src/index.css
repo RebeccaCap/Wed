@@ -1,0 +1,44 @@
+:root {
+  --paper: #fbfaf5;
+  --ink: #303a2e;
+  --body: #697064;
+  --sage: #8c9b7c;
+  --sage-dark: #617255;
+  --sage-pale: #e8eee1;
+  --yellow: #e7cd65;
+  --yellow-pale: #f5efcf;
+  --line: #e4e3d8;
+  --serif: 'Cormorant Garamond', 'Palatino Linotype', Georgia, serif;
+  --sans: 'DM Sans', 'Avenir Next', Avenir, sans-serif;
+
+  font: 15px/1.6 var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--sage-dark);
+  outline-offset: 4px;
+}
