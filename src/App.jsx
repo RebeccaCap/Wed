@@ -1,5 +1,6 @@
 import './App.css'
 import som from './assets/som.jpg'
+import map from './assets/map.jpeg'
 
 function App() {
   return (
@@ -57,7 +58,7 @@ function App() {
             </li>
             <li className="schedule-row">
               <time dateTime="2027-06-19T14:30">14.30</time>
-              <span>Gästerna tar sig till Luckan, med ett eller två stopp längs vägen</span>
+              <span>Gästerna tar sig till Luckan, med ett eller två stopp längst vägen</span>
             </li>
             <li className="schedule-row">
               <time dateTime="2027-06-19T15:30">15.30</time>
@@ -85,7 +86,8 @@ function App() {
         <section className="getting-here" id="getting-here" aria-labelledby="venue-title">
           <p className="eyebrow">PLATSERNA</p>
           <h2 id="venue-title">Vi ses i Bromma</h2>
-          <p>Vigseln äger rum i Bromma kyrka. Efter ceremonin fortsätter firandet på Luckan Ängby.</p>
+          <p>Vigseln äger rum i Bromma kyrka. Efter ceremonin fortsätter firandet på Luckan Ängby. <br/> Törstig mellan kyrkan och Luckan? Se kartan för tips på trevliga ställen längst vägen.</p>
+          <img src={map} alt="Karta över Bromma kyrka och Luckan Ängby" className="venue-map" />
         </section>
 
         <section className="rsvp" id="rsvp" aria-labelledby="rsvp-title">
