@@ -36,7 +36,7 @@ function App() {
             <div className="photo-placeholder__frame">
               <img src={som} alt="Simon och Michaela" className="photo-placeholder__image" />
             </div>
-            <figcaption>♥</figcaption>
+            <figcaption>♡</figcaption>
           </figure>
         </section>
 
