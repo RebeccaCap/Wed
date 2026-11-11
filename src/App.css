@@ -78,7 +78,9 @@
 .invitation h1,
 .details h2,
 .getting-here h2,
-.rsvp h2 {
+.rsvp h2,
+.faq h2,
+.kladkod h2 {
   color: var(--ink);
   font-family: var(--serif);
   font-weight: 400;
@@ -156,13 +158,20 @@
 }
 
 .photo-placeholder__frame {
+  position: relative;
   display: flex;
   flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 13px;
+  min-height: 0;
+  overflow: hidden;
   border: 1px dashed rgb(87 108 77 / 40%);
+}
+
+.photo-placeholder__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .photo-placeholder__icon {
@@ -203,7 +212,7 @@
 .photo-placeholder figcaption {
   padding-top: 15px;
   color: var(--sage-dark);
-  font-size: 11px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -237,12 +246,18 @@
 
 .schedule-row {
   display: grid;
-  grid-template-columns: 74px 1fr auto;
+  grid-template-columns: 74px 1fr;
   align-items: baseline;
   gap: 14px;
   padding: 19px 0;
   border-bottom: 1px solid var(--line);
   font-size: 13px;
+}
+
+.schedule {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .schedule-row:first-child {
@@ -255,17 +270,20 @@
   font-size: 11px;
 }
 
-.getting-here {
+.getting-here,
+.faq {
   padding: 85px 24px;
   background: var(--sage-pale);
   text-align: center;
 }
 
-.getting-here .eyebrow {
+.getting-here .eyebrow,
+.faq .eyebrow {
   margin-bottom: 12px;
 }
 
-.getting-here > p:not(.eyebrow) {
+.getting-here > p:not(.eyebrow),
+.faq > p:not(.eyebrow) {
   margin: 13px 0 18px;
   color: var(--body);
   font-size: 13px;
@@ -277,17 +295,20 @@
   font-size: 12px;
 }
 
-.rsvp {
+.rsvp,
+.kladkod {
   padding: 86px 24px 94px;
   background: var(--yellow-pale);
   text-align: center;
 }
 
-.rsvp .eyebrow {
+.rsvp .eyebrow,
+.kladkod .eyebrow {
   margin-bottom: 12px;
 }
 
-.rsvp > p:not(.eyebrow) {
+.rsvp > p:not(.eyebrow),
+.kladkod > p:not(.eyebrow) {
   margin: 14px 0 22px;
   color: var(--body);
   font-size: 13px;
@@ -354,7 +375,9 @@
   }
 
   .getting-here,
-  .rsvp {
+  .rsvp,
+  .faq,
+  .kladkod {
     padding-top: 67px;
     padding-bottom: 70px;
   }
