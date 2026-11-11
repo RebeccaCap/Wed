@@ -43,7 +43,7 @@ function App() {
         <section className="details" id="the-day" aria-labelledby="details-title">
           <div className="details-intro">
             <p className="eyebrow">DAGENS TIDER</p>
-            <h2 id="details-title">En dag att minnas</h2>
+            <h2 id="details-title">Vår bröllopsdag</h2>
             <p>Vi ser fram emot att fira tillsammans med våra favoritmänniskor.</p>
           </div>
           <ol className="schedule" aria-label="Dagens program">
