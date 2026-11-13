@@ -302,6 +302,35 @@
   font-size: 13px;
 }
 
+.copy-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--sage-dark);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.copy-button:hover {
+  color: var(--ink);
+}
+
+.copy-button:focus-visible {
+  outline: 2px solid var(--sage-dark);
+  outline-offset: 3px;
+}
+
+.copy-status {
+  display: block;
+  margin-top: 4px;
+  color: var(--sage-dark);
+  font-size: 12px;
+}
+
 .venue-map {
   display: block;
   width: 100%;

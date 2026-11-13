@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import som from './assets/som.jpg'
 import map from './assets/map.jpeg'
@@ -6,6 +7,34 @@ import blommor from './assets/blommor.png'
 import rings from './assets/rings.png'
 
 function App() {
+  const [phoneCopyStatus, setPhoneCopyStatus] = useState('')
+  const [emailCopyStatus, setEmailCopyStatus] = useState('')
+
+  const copyToClipboard = async (text, setStatus, successMessage, errorMessage) => {
+    try {
+      await navigator.clipboard.writeText(text)
+      setStatus(successMessage)
+    } catch {
+      setStatus(errorMessage)
+    }
+  }
+
+  const copyPhoneNumber = () =>
+    copyToClipboard(
+      '+46 73 982 77 16',
+      setPhoneCopyStatus,
+      'Numret kopierat.',
+      'Kunde inte kopiera numret. Markera och kopiera det manuellt.',
+    )
+
+  const copyEmailAddress = () =>
+    copyToClipboard(
+      'michaela.bergekrans@gmail.com',
+      setEmailCopyStatus,
+      'E-postadressen kopierad.',
+      'Kunde inte kopiera e-postadressen. Markera och kopiera den manuellt.',
+    )
+
   return (
     <div className="site-shell" id="top">
       <header className="site-header">
@@ -101,7 +130,7 @@ function App() {
         <section className="rsvp" id="rsvp" aria-labelledby="rsvp-title">
           <p className="eyebrow">HOPPAS VI SES</p>
           <h2 id="rsvp-title">OSA</h2>
-          <p>Meddela oss gärna om du kommer senast den <strong>31 mars</strong>: michaela.bergekrans@gmail.com <br/>När du OSA:r vänlige ange om du kommer ensam eller tillsammans med en medföljande gäst samt eventuella matrestriktioner.</p>
+          <p>Meddela oss gärna om du kommer senast den <strong>31 mars</strong>: <button className="copy-button" type="button" onClick={copyEmailAddress} aria-label="Kopiera e-postadressen michaela.bergekrans@gmail.com">michaela.bergekrans@gmail.com</button>{emailCopyStatus && <span className="copy-status" role="status">{emailCopyStatus}</span>} <br/>När du OSA:r vänlige ange om du kommer ensam eller tillsammans med en medföljande gäst samt eventuella matrestriktioner.</p>
           <a className="button-link button-link--dark" href="mailto:michaela.bergekrans@gmail.com?subject=OSA%20-%20Simon%20och%20Michaela">
             OSA via e-post
           </a>
@@ -112,7 +141,7 @@ function App() {
           <p className="eyebrow">ÖVRIG INFORMATION</p>
           <h2 id="faq-title">FAQ</h2>
           <p>Warner Nickerson och Alexandra Hummel är vårt toastpar! Hör av er till dem om ni vill hålla tal eller har andra funderingar.</p>
-          <p>Er närvaro är den finaste gåvan vi kan få. För den som ändå vill ge en present önskar vi oss ett bidrag till vår kommande bröllopsresa.<br /> Swish sker till brudens syster Rebecca: +46 73 982 77 16</p>
+          <p>Er närvaro är den finaste gåvan vi kan få. För den som ändå vill ge en present önskar vi oss ett bidrag till vår kommande bröllopsresa.<br /> Swish sker till brudens syster Rebecca: <button className="copy-button" type="button" onClick={copyPhoneNumber} aria-label="Kopiera telefonnumret +46 73 982 77 16">+46 73 982 77 16</button>{phoneCopyStatus && <span className="copy-status" role="status">{phoneCopyStatus}</span>}</p>
         </section>
           <section className="kladkod" id="kladkod" aria-labelledby="kladkod-title">
           <p className="eyebrow">KLÄDKOD</p>
