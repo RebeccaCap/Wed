@@ -1,6 +1,9 @@
 import './App.css'
 import som from './assets/som.jpg'
 import map from './assets/map.jpeg'
+import table from './assets/table.png'
+import blommor from './assets/blommor.png'
+import rings from './assets/rings.png'
 
 function App() {
   return (
@@ -21,6 +24,7 @@ function App() {
         <section className="invitation" aria-labelledby="couple-names">
           <div className="invitation-copy">
             <p className="eyebrow">INBJUDAN TILL VÅR BRÖLLOPSDAG</p>
+            <img src={blommor} alt="" className="blommor" aria-hidden="true" />
             <h1 id="couple-names">Simon <span className="name-ampersand">&</span><br />Michaela</h1>
             <p className="invitation-note">Vi vill gärna fira vår stora dag tillsammans med dig.</p>
             <div className="event-date">
@@ -30,7 +34,7 @@ function App() {
                 <p>Bromma kyrka</p>
               </div>
             </div>
-            <a className="button-link" href="#the-day">Se dagens tider <span aria-hidden="true">-&gt;</span></a>
+            <a className="button-link" href="#the-day">Dagens schema <span className="heart">♡</span></a>
           </div>
 
           <figure className="photo-placeholder" role="img" aria-label="Plats för ett foto på Simon och Michaela">
@@ -53,19 +57,23 @@ function App() {
               <span>Vigsel i Bromma kyrka</span>
             </li>
             <li className="schedule-row">
-              <time dateTime="2027-06-19T14:00">14.00</time>
-              <span>Vi kommer ut ur kyrkan och fotografering</span>
+              <time dateTime="2027-06-19T14:15">14.15</time>
+              <span>Brudparets utmarsch</span>
             </li>
             <li className="schedule-row">
               <time dateTime="2027-06-19T14:30">14.30</time>
-              <span>Gästerna tar sig till Luckan, med ett eller två stopp längst vägen</span>
+              <span>Fotografering brudparet</span>
             </li>
             <li className="schedule-row">
-              <time dateTime="2027-06-19T15:30">15.30</time>
-              <span>Mingel</span>
+              <time dateTime="2027-06-19T14:30">14.30-15.45</time>
+              <span>Gäster tar sig till Luckan Ängby<br/>via taxi eller tar vår förslagna mingelrunda med ett eller flera stopp på längst vägen</span>
             </li>
             <li className="schedule-row">
-              <time dateTime="2027-06-19T16:30">16.30</time>
+              <time dateTime="2027-06-19T16:00">16.00</time>
+              <span>Mingel Luckan Ängby</span>
+            </li>
+            <li className="schedule-row">
+              <time dateTime="2027-06-19T17:00">17.00</time>
               <span>Tårta och brudskål</span>
             </li>
             <li className="schedule-row">
@@ -85,31 +93,34 @@ function App() {
 
         <section className="getting-here" id="getting-here" aria-labelledby="venue-title">
           <p className="eyebrow">PLATSERNA</p>
-          <h2 id="venue-title">Vi ses i Bromma</h2>
-          <p>Vigseln äger rum i Bromma kyrka. Efter ceremonin fortsätter firandet på Luckan Ängby. <br/> Törstig mellan kyrkan och Luckan? Se kartan för tips på trevliga ställen längst vägen.</p>
+          <h2 id="venue-title">Vi ses på Luckan i Södra Ängby</h2>
+          <p>Vigseln äger rum i Bromma kyrka. Efter ceremonin fortsätter firandet på Luckan Ängby. <br/> Törstig mellan kyrkan och Luckan? Här kommer vår föreslagna mingelpromenad om man vill ta sig till fots.</p>
           <img src={map} alt="Karta över Bromma kyrka och Luckan Ängby" className="venue-map" />
         </section>
 
         <section className="rsvp" id="rsvp" aria-labelledby="rsvp-title">
           <p className="eyebrow">HOPPAS VI SES</p>
           <h2 id="rsvp-title">OSA</h2>
-          <p>Meddela oss gärna om du kommer och eventuella matrestriktioner: michaela.bergekrans@gmail.com</p>
+          <p>Meddela oss gärna om du kommer senast den <strong>31 mars</strong>: michaela.bergekrans@gmail.com <br/>När du OSA:r vänlige ange om du kommer ensam eller tillsammans med en medföljande gäst samt eventuella matrestriktioner.</p>
           <a className="button-link button-link--dark" href="mailto:michaela.bergekrans@gmail.com?subject=OSA%20-%20Simon%20och%20Michaela">
-            OSA via e-post <span aria-hidden="true">-&gt;</span>
+            OSA via e-post
           </a>
         </section>
           <section className="faq" id="faq" aria-labelledby="faq-title">
+          <img src={rings} alt="Illustration av ringar" className="rings-image" />
+
           <p className="eyebrow">ÖVRIG INFORMATION</p>
           <h2 id="faq-title">FAQ</h2>
-          <p>Warner och Hummel är vårt toastpar! Hör av er till dem om ni vill hålla tal eller har andra funderingar.</p>
-          <p>Er närvaro är den finaste gåvan vi kan få. För den som ändå vill ge en present önskar vi oss ett bidrag till vår kommande resa.<br /> Swisha gärna till brudens syster: +46 73 982 77 16</p>
+          <p>Warner Nickerson och Alexandra Hummel är vårt toastpar! Hör av er till dem om ni vill hålla tal eller har andra funderingar.</p>
+          <p>Er närvaro är den finaste gåvan vi kan få. För den som ändå vill ge en present önskar vi oss ett bidrag till vår kommande bröllopsresa.<br /> Swish sker till brudens syster Rebecca: +46 73 982 77 16</p>
         </section>
           <section className="kladkod" id="kladkod" aria-labelledby="kladkod-title">
           <p className="eyebrow">KLÄDKOD</p>
           <h2 id="kladkod-title">Mörk kostym</h2>
-          <p>Vi önskar att alla gäster bär mörk kostym.</p>
+          <img src={table} alt="Illustration av ett dukat bröllopsbord" className="table-image" />
         </section>
       </main>
+
 
       <footer className="site-footer">
         <a className="wordmark" href="#top" aria-label="Till toppen">S<span>&</span>M</a>
